@@ -15,5 +15,5 @@ class FileManager:
         dest = os.path.join(self.root, c)
         name = os.path.basename(old_path)
         new_path = os.path.join(dest, name)
-        shutil.move(old_path, new_path)
+        shutil.copy2(old_path, new_path)
         return new_path
