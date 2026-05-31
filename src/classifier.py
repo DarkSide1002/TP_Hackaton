@@ -1,4 +1,4 @@
-from email_reader import Email
+from src.email_reader import Email
 
 dict = {
     "spam": [
