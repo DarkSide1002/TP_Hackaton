@@ -1,3 +1,5 @@
+from email_reader import Email
+
 dict = {
     "spam": [
         ("данные карты", 1000), ("dannye karty", 1000),
@@ -156,3 +158,27 @@ dict = {
         ("итог", 10), ("itog", 10),
     ],
 }
+
+
+class Classifier:
+    @staticmethod
+    def classify(email: Email) -> str:
+        if email.isu:
+            return "unclassified"
+        text = email.text.lower()
+        rating = {}
+        for i, mp in dict.items():
+            if i == "unclassified":
+                continue
+            balls = sum(w for kw, w in mp if kw.lower() in text)
+            if balls > 0:
+                rating[i] = balls
+        if not rating:
+            return "unclassified"
+        mx = -1
+        best = ""
+        for x in rating.keys():
+            if mx < rating[x]:
+                mx = rating[x]
+                best = x
+        return best
