@@ -4,8 +4,6 @@ dict = {
     "spam": [
         ("данные карты", 1000), ("dannye karty", 1000),
         ("данные банковской карты", 1000), ("bankovskoy karty", 1000),
-        ("перейдите по ссылке", 100), ("pereydite po ssylke", 100),
-        ("подозрительн", 100), ("podozriteln", 100),
         ("только сегодня", 1000), ("tolko segodnya", 1000),
         ("exclusive offer", 1000),
         ("поздравляем", 1000), ("pozdravlyaem", 1000),
@@ -101,8 +99,6 @@ dict = {
         ("уточнение по оплате", 10), ("utochneniye po oplate", 10),
         ("задолжен", 10), ("zadolzhen", 10),
         ("реквизит", 10), ("rekvizit", 10),
-        ("invoice", 10),
-        ("billing", 10),
         ("платёж", 10), ("platyozh", 10),
         ("платеж", 10), ("platezh", 10),
         ("бухгалтер", 7), ("bukhgalter", 7),

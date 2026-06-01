@@ -34,12 +34,13 @@ def test_pipeline1(p_paths):
     assert stats["проверенно писем"] == 5
     assert stats["по категориям"]["critical"] == 1
     assert stats["по категориям"]["spam"] == 1
-    assert stats["по категориям"]["unclassified"] == 3
+    assert stats["по категориям"]["unclassified"] == 2
+    assert stats["по категориям"]["draft"] == 1
     assert stats["количество ошибок"] == 2
     assert (mailbox / "critical" / "critical.txt").exists()
     assert (mailbox / "spam" / "spam.txt").exists()
     assert (mailbox / "unclassified" / "unknown.txt").exists()
-    assert (mailbox / "unclassified" / "empty.txt").exists()
+    assert (mailbox / "draft" / "empty.txt").exists()
     assert (mailbox / "unclassified" / "photo.jpeg").exists()
     assert log_path.exists()
     assert report_path.exists()

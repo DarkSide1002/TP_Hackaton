@@ -35,7 +35,6 @@ def test_reader3(reader, tmp_path):
 def test_reader4(reader, write_mail):
     path = write_mail("empty.txt", "")
     email = reader.read(str(path))
-    assert email.isu
     assert email.error == "Пустой файл"
 
 

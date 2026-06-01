@@ -18,7 +18,7 @@ class EmailReader:
         if not os.path.exists(path):
             return Email(name=name, isu=True, error="Файл не найден")
         if os.path.getsize(path) == 0:
-            return Email(name=name, isu=True, error="Пустой файл")
+            return Email(name=name, text="draft", error="Пустой файл")
         if ext not in self.extensions:
             return Email(name=name, isu=True, error=f"Неподдерживающийся формат:{ext}")
         try:
