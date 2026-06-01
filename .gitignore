@@ -6,6 +6,7 @@ venv/
 .venv/
 logs/
 mailbox/
+.pytest_cache
 
 # IDE
 .idea/
