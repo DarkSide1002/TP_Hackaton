@@ -1,11 +1,12 @@
 set -e
+
 mkdir -p "./logs" "./mailbox"
 if [ ! -d "./inbox" ]; then
   echo "Ошибка: папка inbox не найдена"
   exit 1
 fi
 echo "Установка необходимых модулей и библиотек из файла с зависимостями:"
-pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 echo "Установлено"
 cnt=$(ls "./inbox" | wc -l)
 echo "Найдено файлов в inbox: $cnt"
